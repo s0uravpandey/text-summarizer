@@ -478,7 +478,8 @@ h3{
         <button type="submit" class="btn btn-primary">Generate</button>
     </form>
    <br>
-   <br>
+   <button class="btn btn-primary" id="copy" onclick="myfunction()">Copy</button>
+    <br>
    <div id="result">
    {{ prediction_text }}</div>
  </div>
@@ -497,5 +498,12 @@ h3{
   $(btnclick).click(function() {
     $("#myModal").modal();
   });
+</script>
+<script>
+function myfunction(){
+    var copyTextarea = document.getElementById("result");
+    copyTextarea.select(); //select the text area
+    document.execCommand("copy"); //copy to clipboard
+}
 </script>
 </html>
