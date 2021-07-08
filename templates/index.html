@@ -478,11 +478,15 @@ h3{
         <button type="submit" class="btn btn-primary">Generate</button>
     </form>
    <br>
-   <button class="btn btn-primary" id="copy" onclick="myfunction()">Copy</button>
     <br>
    <div id="result">
    {{ prediction_text }}</div>
  </div>
+<!-- 	  loader -->
+      <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#000000" /></svg></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js">
 </script>
@@ -498,12 +502,5 @@ h3{
   $(btnclick).click(function() {
     $("#myModal").modal();
   });
-</script>
-<script>
-function myfunction(){
-    var copyTextarea = document.getElementById("result");
-    copyTextarea.select(); //select the text area
-    document.execCommand("copy"); //copy to clipboard
-}
 </script>
 </html>
