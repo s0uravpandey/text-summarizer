@@ -16,7 +16,7 @@ def predict():
     '''
     text=request.form["text"]
     sizereq=request.form["summarysize"]
-    size=0.2
+    size=0.1
     if sizereq=="medium":
         size=0.35
     if sizereq=="long":
